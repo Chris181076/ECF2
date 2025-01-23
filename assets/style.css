@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-family: "Irish Grover", serif;
+}
+body{
+    background-color: #BD9E84 !important;
+}
+#burger{
+    margin: 2rem;
+    
+}
+#burger>img{
+    position: absolute;
+    right: 3.5rem;
+    top: 3.5rem;
+}
+#burger>#mainMenu{
+    position: absolute;
+    width: 20rem;
+    height: 22rem;
+    right: 2rem;
+    top: 6rem;
+    background-color: #C5DFDF;
+    border-radius: 20px;
+    display: none;
+    z-index: 100;
+}
+header>#burger>#mainMenu>ul{
+    display: flex;            
+    flex-direction: column;   
+    justify-content: space-around;
+    height: 100%;
+    margin-block-start: 0 !important;
+    margin-block-end: 0 !important;
+    padding-inline-start: 0 !important;                       
+} 
+header>#burger>#mainMenu>ul>li{
+    text-align: center; 
+    font-size: 1.75rem;
+}
+#logo{
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+}
+#evenement{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+#evenement>img{
+    width: 5rem;
+    height: 4.5625rem;
+}
+#evenement>p{
+    margin-top: 1rem;
+}
+#titre>h1{
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+#carousel{
+    max-width: 15rem;
+    max-height: 17rem;
+    margin: 0 auto;
+}
+img.d-block{
+    width: 15rem;
+    height: 17rem;
+}
+#userAccount{
+    display: flex;
+    width: 20.5rem;
+    padding-left: 2rem;
+    padding-top: 1.5rem; 
+    margin: 0 auto;
+}
+#userAccount>#connectionClick{
+    display: flex;
+}
+#userAccount>#connectionClick>img{
+    position: relative;
+}
+#userAccount>#connectionClick>p{
+    position: absolute;
+    font-size: 1.2rem;
+    margin-top: 1.65rem;
+    margin-left: 1.1rem;
+}
+#userAccount>#createAccountClick{
+    display: flex;
+    padding-left: 5rem;
+}
+#userAccount>#createAccountClick>img{
+    position: relative;
+}
+#userAccount>#createAccountClick>p{
+    position: absolute;
+    font-size: 1.2rem;
+    margin-top: 1.65rem;
+    margin-left: 1.1rem;
+}
