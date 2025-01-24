@@ -1,7 +1,6 @@
-
-
-
-
+<?php
+session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,8 +22,8 @@
             <ul>
                 <li>Votre livre d’Or</li>
                 <li>Votre livre d’Or Zoom</li>
-                <li>Votre espace</li>
-                <li>Déconnection</li>
+                <li><a href="./redirection.php">Votre espace</a></li>
+                <li><a href="./deconnection.php">Déconnection</a></li>
             </ul>
             </div>
         </div>
@@ -74,6 +73,7 @@
                 <p>Create Account</p>
             </div>
         </div>
+        <h3>L'expo t'en as pensé quoi?</h3>
     </main>
     <script src="./assets/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
