@@ -1,6 +1,16 @@
 <?php
 session_start();
 ?>
+<?php 
+include_once './connection.php';
+
+if (isset($_SESSION['user_id'])) {
+$id= $_SESSION['user_id'];
+$req=$bdd->query('SELECT `content` FROM `messages`');
+$listeMessages= $req->fetchAll(PDO::FETCH_ASSOC);
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -74,6 +84,26 @@ session_start();
             </div>
         </div>
         <h3>L'expo t'en as pensé quoi?</h3>
+      
+        
+        <div class="card w-50 mx-auto">
+            <?php foreach ($listeMessages as $index=>$message): 
+                $cardClass = ($index % 2 == 0) ? 'card-white' : 'card-orange';
+                ?>
+                <div class="card <?= $cardClass ?>">
+                    <div class="row g-0">
+                    <div class="col-md-2">
+                    <img src="./images/default-avatar.png" class="img-fluid rounded-start" alt="Avatar utilisateur">
+                    </div>
+                    <div class="col-md-10">
+                    <div class="card-body">
+                        <p class="card-text"><?= htmlspecialchars($message['content']) ?></p>
+                    </div>
+                    </div>
+                </div>
+        </div>
+            <?php endforeach; ?>
+        </div>
     </main>
     <script src="./assets/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

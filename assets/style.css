@@ -108,5 +108,22 @@ img.d-block{
 h3{
     font-size: 2rem;
     text-align: center;
-    margin: 2rem;
+    margin: 2rem 0;
+}
+.card{
+    margin-bottom: 1.5rem;
+}
+.card-orange {
+    background-color: #E68815;
+    color: white;
+}
+.card-white {
+    background-color: white;
+}
+.card-text{
+    font-size:large;
+    font-family: "Open Sans", serif;
+}
+.bg-marron{
+    background-color: #BD9E84 ;
 }
