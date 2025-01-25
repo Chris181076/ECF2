@@ -111,7 +111,7 @@ h3{
     margin: 2rem 0;
 }
 .card{
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 0;
 }
 .card-orange {
     background-color: #E68815;
@@ -126,4 +126,21 @@ h3{
 }
 .bg-marron{
     background-color: #BD9E84 ;
+}
+#containerRow{
+    margin-top: 10rem;
+}
+.col-form-label{
+    font-size: 1.5rem;
+}
+.btn{
+    font-size: 1.5rem;
+}
+#redirectionCreateAccount>p{
+    font-size: 1.5rem;
+}
+#redirectionCreateAccount{
+    margin-top: 4rem;
+    text-align: center;
+
 }

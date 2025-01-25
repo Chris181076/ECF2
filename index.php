@@ -4,11 +4,15 @@ session_start();
 <?php 
 include_once './connection.php';
 
-if (isset($_SESSION['user_id'])) {
-$id= $_SESSION['user_id'];
-$req=$bdd->query('SELECT `content` FROM `messages`');
-$listeMessages= $req->fetchAll(PDO::FETCH_ASSOC);
+
+if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])){
+    echo "<h4>Bonjour, " . $_SESSION['user_first_name'] . " !</h4>";
+} else {
+    echo "<h4>Aucun utilisateur trouvé.</h4>";
 }
+
+$req=$bdd->query("SELECT `content` FROM `messages`");
+$listeMessages= $req->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -76,11 +80,11 @@ $listeMessages= $req->fetchAll(PDO::FETCH_ASSOC);
         <div id="userAccount">
             <div id="connectionClick">
                 <img src="./images/triangleUser.png" alt="triangle click connection">
-                <p>Connection</p>
+                <p><a href="http://localhost/ecf2/login.php">Connection</a></p>
             </div>
             <div id="createAccountClick"> 
                 <img src="images/triangleUser.png" alt="triangle click account">
-                <p>Create Account</p>
+                <p><a href="http://localhost/ecf2/inscription.php">Create Account</a></p>
             </div>
         </div>
         <h3>L'expo t'en as pensé quoi?</h3>
