@@ -1,7 +1,8 @@
 <?php
-include_once './connection.php';
+session_start();
 ?>
 <?php
+include_once './connection.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
     if (isset($_POST['name'], $_POST['email'], $_POST['password'])){

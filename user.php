@@ -38,7 +38,7 @@ echo "<h1>Bonjour, " . htmlspecialchars($_SESSION['user_first_name']) . " !</h1>
     <button type="submit">Envoyer</button>
     </form>
 
-
+    
     <p><a href="http://localhost/ecf2/index">Accueil</a></p>
 </body>
 </html>
