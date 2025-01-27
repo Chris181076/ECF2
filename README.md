@@ -5,3 +5,5 @@ Figma version mobile: https://www.figma.com/design/vGuImCLauyWAg478qy7RPJ/ECF2?n
 Figma version desktop: https://www.figma.com/design/vGuImCLauyWAg478qy7RPJ/ECF2?node-id=6-251&p=f&t=QbcOFrvBrBGxp4yE-0
 
 MCD MLD : https://www.figma.com/design/vGuImCLauyWAg478qy7RPJ/ECF2?node-id=59-255&p=f&t=QbcOFrvBrBGxp4yE-0
+
+Désolée, je n'ai pas eu le temps de convertir les ilages en webp;
