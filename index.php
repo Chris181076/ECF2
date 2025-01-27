@@ -11,8 +11,16 @@ if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])){
     echo "<h4>Aucun utilisateur trouvé.</h4>";
 }
 
-$req=$bdd->query("SELECT `content` FROM `messages`");
-$listeMessages= $req->fetchAll(PDO::FETCH_ASSOC);
+$req= $bdd->prepare('SELECT `content`, `name`, `image`, `messages`.`created_at`FROM `messages` 
+INNER JOIN `user`
+ON `messages`.`id_user` = `user`.`id_user`
+ORDER BY `messages`.`created_at` DESC LIMIT 10;');
+
+$req->execute();
+$messages = $req->fetchAll(PDO::FETCH_ASSOC);
+
+
+$imagePath = isset($_SESSION['profile_image']) ? $_SESSION['profile_image'] : './images/default-avatar.png';
 
 ?>
 
@@ -30,8 +38,11 @@ $listeMessages= $req->fetchAll(PDO::FETCH_ASSOC);
 </head>
 <body>
     <header>
+        <figure>
+            <img src="./images/makeup-2983550_1280-removebg-preview.png" alt="visage peint">
+        </figure>
         <div id="burger">
-            <img src="./images/burger_triangle_bleu.png" alt="menu burger">
+            <img src="./images/burger1.png" alt="menu burger">
             <div id="mainMenu">
             <ul>
                 <li>Votre livre d’Or</li>
@@ -91,13 +102,13 @@ $listeMessages= $req->fetchAll(PDO::FETCH_ASSOC);
       
         
         <div class="card w-50 mx-auto">
-            <?php foreach ($listeMessages as $index=>$message): 
+            <?php foreach ($messages as $index=>$message): 
                 $cardClass = ($index % 2 == 0) ? 'card-white' : 'card-orange';
                 ?>
                 <div class="card <?= $cardClass ?>">
                     <div class="row g-0">
                     <div class="col-md-2">
-                    <img src="./images/default-avatar.png" class="img-fluid rounded-start" alt="Avatar utilisateur">
+                    <img src=<?= $message['image'] ?> class="img-fluid rounded-start" alt="Avatar utilisateur">
                     </div>
                     <div class="col-md-10">
                     <div class="card-body">

@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+    text-decoration: none;
     font-family: "Irish Grover", serif;
 }
 body{
@@ -9,28 +10,28 @@ body{
 }
 #burger{
     margin: 2rem;
-    
 }
 #burger>img{
     position: absolute;
     right: 3.5rem;
     top: 3.5rem;
+   
 }
 #burger>#mainMenu{
     position: absolute;
-    width: 20rem;
-    height: 22rem;
+    width: 12rem;
+    height: 12rem;
     right: 2rem;
     top: 6rem;
     background-color: #C5DFDF;
     border-radius: 20px;
     display: none;
     z-index: 100;
+    padding: 0.75rem;
 }
 header>#burger>#mainMenu>ul{
     display: flex;            
     flex-direction: column;   
-    justify-content: space-around;
     height: 100%;
     margin-block-start: 0 !important;
     margin-block-end: 0 !important;
@@ -38,7 +39,18 @@ header>#burger>#mainMenu>ul{
 } 
 header>#burger>#mainMenu>ul>li{
     text-align: center; 
-    font-size: 1.75rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+header>#burger>#mainMenu>ul>li:hover{
+    background-color: #fff;
+    color: #C5DFDF; 
+    transition: ease-in-out 1s;
+    cursor: pointer;
+}
+header>#burger>#mainMenu>ul>li>a{
+    text-decoration: none;
+    color: inherit;
 }
 #logo{
     margin-top: 6rem;
@@ -110,6 +122,12 @@ h3{
     text-align: center;
     margin: 2rem 0;
 }
+h2{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 2rem;
+}
 .card{
     margin: 1.5rem 0;
 }
@@ -142,5 +160,42 @@ h3{
 #redirectionCreateAccount{
     margin-top: 4rem;
     text-align: center;
-
+}
+#imgUser{
+    margin: 2rem 0;
+}
+form{
+    border-radius: 20px;
+    font-size: 1.5rem;
+}
+form>textarea{
+    border-radius: 20px;
+}
+#centerForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#messagesEnvoyes{
+    margin-bottom: 2rem;
+    background-color: #C5DFDF;
+}
+#colorBlue{
+    background-color: #C5DFDF;
+    border-radius: 0;
+}
+header>figure{
+    display: none !important;
+}
+figure>img{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 4rem;
+}
+@media screen and (min-width: 1000px){
+    header>figure{
+        display: block !important;
+    }
 }

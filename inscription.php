@@ -39,10 +39,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 <body>
 <header>
         <div id="burger">
-            <img src="./images/burger_triangle_bleu.png" alt="menu burger">
+            <img src="./images/burger1.png" alt="menu burger">
             <div id="mainMenu">
             <ul>
-                <li>Votre livre d’Or</li>
+                <li><a href="http://localhost/ecf2/index">Votre livre d’Or</a></li>
                 <li>Votre livre d’Or Zoom</li>
                 <li><a href="./redirection.php">Votre espace</a></li>
                 <li><a href="./deconnection.php">Déconnection</a></li>
